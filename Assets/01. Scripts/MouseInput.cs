@@ -70,7 +70,7 @@ public class MouseInput : MonoBehaviour
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        Debug.DrawRay(ray.origin, ray.direction * 100, Color.black);
+        Debug.DrawRay(ray.origin, ray.direction * 100, Color.green);
 
         int floorLayerMask = LayerMask.GetMask("FLOOR");
 
