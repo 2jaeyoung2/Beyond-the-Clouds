@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "905300656053",
+    "firebase_url": "https://beyond-the-clouds-7bef5-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "beyond-the-clouds-7bef5",
+    "storage_bucket": "beyond-the-clouds-7bef5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905300656053:android:fe323efab2c2369417a3fc",
+        "android_client_info": {
+          "package_name": "com.gooparoStudio.BeyondTheClouds"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6UzURK8UwVkmDZiT-0XbW03hhslvTOHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
