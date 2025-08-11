@@ -311,7 +311,7 @@ MonoBehaviour:
   InvertFowEffect: 0
   FogFadePower: 1
   FogAppearance: 0
-  UnknownColor: {r: 1, g: 0.5801887, b: 0.5801887, a: 1}
+  UnknownColor: {r: 1, g: 0.5707547, b: 0.5707547, a: 1}
   SaturationStrength: 0
   BlurStrength: 1
   BlurDistanceScreenPercentMin: 0.1
