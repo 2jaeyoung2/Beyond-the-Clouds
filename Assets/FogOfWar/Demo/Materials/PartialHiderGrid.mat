@@ -103,8 +103,6 @@ Material:
     - _AORemapMin: 0
     - _AlphaClip: 1
     - _AlphaToMask: 0
-    - _BUILTIN_QueueControl: -1
-    - _BUILTIN_QueueOffset: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 0
     - _BumpScale: 1
@@ -162,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 7
---- !u!114 &5216520370483769171
+--- !u!114 &3360819892227062928
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
