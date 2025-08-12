@@ -7379,7 +7379,7 @@ MonoBehaviour:
   CalculateHidersAtHiderHeight: 0
   ObstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   RaycastResolution: 0.5
   ResolveEdge: 1
   MaxEdgeResolveIterations: 10
