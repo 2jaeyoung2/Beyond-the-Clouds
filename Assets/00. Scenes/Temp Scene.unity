@@ -132,8 +132,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 503161904}
-  - component: {fileID: 503161905}
   - component: {fileID: 503161906}
+  - component: {fileID: 503161905}
   m_Layer: 0
   m_Name: Input Manager
   m_TagString: Untagged

@@ -18,6 +18,6 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
-        _moveSpeed = 5f;
+        MoveSpeed = 5f;
     }
 }

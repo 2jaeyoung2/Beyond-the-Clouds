@@ -11,15 +11,12 @@ public class MouseInput : MonoBehaviour
 
     private bool hasPos = false;
 
+    [Header("Input Actions")]
+    [SerializeField] private InputActionReference getCursorPosAction; // 인스펙터에서 연결
+
     #region Properties
 
-    public static MouseInput Instance
-    {
-        get
-        {
-            return _instance;
-        }
-    }
+    public static MouseInput Instance => _instance;
 
     public RaycastHit Info { get; private set; }
 
@@ -45,6 +42,30 @@ public class MouseInput : MonoBehaviour
         #endregion
     }
 
+    private void OnEnable()
+    {
+        if (getCursorPosAction != null)
+        {
+            getCursorPosAction.action.performed += OnGetCursorPos;
+
+            getCursorPosAction.action.canceled += OnGetCursorPosCanceled;
+
+            getCursorPosAction.action.Enable();
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (getCursorPosAction != null)
+        {
+            getCursorPosAction.action.performed -= OnGetCursorPos;
+
+            getCursorPosAction.action.canceled -= OnGetCursorPosCanceled;
+
+            getCursorPosAction.action.Disable();
+        }
+    }
+
     private void Update()
     {
         if (hasPos == true)
@@ -53,17 +74,14 @@ public class MouseInput : MonoBehaviour
         }
     }
 
-    public void OnGetCursorPos(InputAction.CallbackContext ctx)
+    private void OnGetCursorPos(InputAction.CallbackContext ctx)
     {
-        if (ctx.phase == InputActionPhase.Performed)
-        {
-            hasPos = true;
-        }
+        hasPos = true;
+    }
 
-        if (ctx.phase == InputActionPhase.Canceled)
-        {
-            hasPos = false;
-        }
+    private void OnGetCursorPosCanceled(InputAction.CallbackContext ctx)
+    {
+        hasPos = false;
     }
 
     private void SetCursorPos()
@@ -74,9 +92,7 @@ public class MouseInput : MonoBehaviour
 
         int floorLayerMask = LayerMask.GetMask("FLOOR");
 
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, 100f, floorLayerMask))
+        if (Physics.Raycast(ray, out RaycastHit hit, 100f, floorLayerMask))
         {
             Info = hit;
         }
