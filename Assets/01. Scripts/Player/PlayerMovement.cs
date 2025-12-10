@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        MoveSpeed = player.MoveSpeed;
+        MoveSpeed = 5f;
     }
 
     private void FixedUpdate()
